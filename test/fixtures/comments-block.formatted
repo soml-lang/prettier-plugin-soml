@@ -1,0 +1,11 @@
+a: [
+	1
+	/* before */ 2
+	3 /* after */
+]
+/* block
+   comment */
+b: {
+	x: 1
+}
+c: [1, /* before */ 2, 3 /* after */]

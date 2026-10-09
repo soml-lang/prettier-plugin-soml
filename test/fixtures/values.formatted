@@ -1,0 +1,17 @@
+hex: 0xFF
+octal: 0o644
+binary: 0b1010
+big: 1_000_000
+float: 3.0
+exponent: 1e10
+inf: infinity
+ninf: -infinity
+yes: true
+no: false
+nothing: null
+when: 2026-09-19T14:00:00+02:00
+fraction: 2026-09-19T14:00:00.5Z
+wait: 1h30m
+short: 1.5s
+literal: 'it is'
+escaped: "tab\there"
