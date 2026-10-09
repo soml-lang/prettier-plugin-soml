@@ -1,0 +1,5 @@
+# Leading comment
+name: 'api' # end of line
+
+# Own line
+port: 8080

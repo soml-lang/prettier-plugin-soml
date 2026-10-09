@@ -1,0 +1,3 @@
+'postgres.host': 'db.internal'
+"postgres.port": 5432
+'quoted key': {x: true}

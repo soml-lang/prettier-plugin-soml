@@ -1,0 +1,8 @@
+top: '''
+  line one
+    indented  
+  '''
+nested: {inner: {text: """
+  a
+  b
+  """}}

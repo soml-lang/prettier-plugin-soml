@@ -1,0 +1,19 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+	"compilerOptions": {
+		"lib": [
+			"ESNext"
+		],
+		"types": [
+			"node"
+		],
+		"noEmit": true,
+		"rewriteRelativeImportExtensions": true,
+		"verbatimModuleSyntax": true
+	},
+	"include": [
+		"source",
+		"test",
+		"scripts"
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"name": "prettier-plugin-soml",
+	"version": "0.0.1",
+	"description": "Prettier plugin for SOML, a config format for humans",
+	"license": "MIT",
+	"repository": "soml-lang/prettier-plugin-soml",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+	"type": "module",
+	"exports": {
+		"types": "./distribution/index.d.ts",
+		"default": "./distribution/index.js"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"build": "tsc --project tsconfig.build.json",
+		"prepack": "npm run build",
+		"test": "xo && tsc && npm run build && node --test 'test/*.ts'",
+		"parity": "node scripts/parity.ts"
+	},
+	"files": [
+		"distribution"
+	],
+	"keywords": [
+		"prettier",
+		"prettier-plugin",
+		"plugin",
+		"soml",
+		"format",
+		"formatter",
+		"config",
+		"configuration"
+	],
+	"dependencies": {
+		"soml-lang": "^0.0.4"
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^8.1.0",
+		"@types/node": "^26.6.4",
+		"prettier": "^3.9.9",
+		"typescript": "^6.0.3",
+		"xo": "^5.0.1"
+	},
+	"peerDependencies": {
+		"prettier": "^3.6.0"
+	},
+	"xo": [
+		{
+			"files": [
+				"test/**"
+			],
+			"rules": {
+				"@typescript-eslint/no-floating-promises": [
+					"error",
+					{
+						"allowForKnownSafeCalls": [
+							{
+								"from": "package",
+								"package": "node:test",
+								"name": [
+									"test",
+									"suite"
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}
